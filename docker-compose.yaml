@@ -1,0 +1,16 @@
+version: '2'
+services:
+  logstash:
+    image: crsng/logstash:latest
+    container_name: logstash
+    restart: always
+    environment:
+      - LS_INPUT_PORT=25826
+      - ELASTICSEARCH_ADDR=172.16.40.242:9200
+      - ELASCTICSEARCH_INDEX=logstash-%{+YYYY.MM.dd}
+      - ELASTICSEARCH_USER=username
+      - ELASTICSEARCH_PASSWD=password
+    ports:
+      - '25826/udp:25826/udp'
+    expose:
+      - '25826/udp'
