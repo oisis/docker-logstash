@@ -18,7 +18,7 @@ for [Docker](https://www.docker.com/)'s.
 
 3. Alternatively build an image from [Dockerfile](https://github.com/oisis/docker-logstash):
 
-```docker build oisis/logstash .```
+```docker build -t oisis/logstash .```
 
 ### Usage
 
