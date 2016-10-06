@@ -7,7 +7,7 @@ services:
     environment:
       - LS_INPUT_PORT=25826
       - ELASTICSEARCH_ADDR=172.16.40.242:9200
-      - ELASCTICSEARCH_INDEX=logstash-%{+YYYY.MM.dd}
+      - ELASTICSEARCH_INDEX=logstash-%{+YYYY.MM.dd}
       - ELASTICSEARCH_USER=username
       - ELASTICSEARCH_PASSWD=password
     ports:
