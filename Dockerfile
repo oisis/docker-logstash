@@ -50,6 +50,7 @@ RUN set -ex \
 
 COPY config/logstash.conf.tpl /etc/logstash/conf.d/
 COPY scripts/docker-entrypoint.sh /
+RUN chmod +x /docker-entrypoint.sh
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["-e", ""]
