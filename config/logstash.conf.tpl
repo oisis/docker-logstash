@@ -18,7 +18,7 @@ filter {
 output {
   elasticsearch {
     hosts => ["{{ ELASTICSEARCH_ADDR | default("127.0.0.1:9200") }}"]
-    index => "{{ ELASCTICSEARCH_INDEX | default("logstash-%{+YYYY.MM.dd}") }}"
+    index => "{{ ELASTICSEARCH_INDEX | default("logstash-%{+YYYY.MM.dd}") }}"
     user => "{{ ELASTICSEARCH_USER | default("") }}"
     password => "{{ ELASTICSEARCH_PASSWD | default("") }}"
   }
