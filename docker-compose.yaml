@@ -1,7 +1,7 @@
 version: '2'
 services:
   logstash:
-    image: crsng/logstash:latest
+    image: oisis/logstash:latest
     container_name: logstash
     restart: always
     environment:
